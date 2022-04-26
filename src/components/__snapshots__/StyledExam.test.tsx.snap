@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`style test suite snapshot 1`] = `
+<h1
+  class="css-1j84qhj-StyledExam e1d9arlk0"
+>
+  헤딩
+</h1>
+`;
