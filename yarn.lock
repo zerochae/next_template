@@ -341,6 +341,14 @@
   resolved "https://registry.yarnpkg.com/@emotion/core/-/core-11.0.0.tgz#d075867e07864119de7cfd5268c15012bd2d6290"
   integrity sha512-w4sE3AmHmyG6RDKf6mIbtHpgJUSJ2uGvPQb8VXFL7hFjMPibE8IiehG8cMX3Ztm4svfCQV6KqusQbeIOkurBcA==
 
+"@emotion/css-prettifier@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@emotion/css-prettifier/-/css-prettifier-1.0.1.tgz#a3ce1667398e83701f52ec43938208faeef2e0a5"
+  integrity sha512-cA9Dtol47mtvWKasPC+8tkh2DS0wBkX0MMHKieXGSkGyx079V7yFY85KC0pPalcIy+vi0LbMR9DNyiJBqYgJ1Q==
+  dependencies:
+    "@emotion/memoize" "^0.7.4"
+    stylis "4.0.13"
+
 "@emotion/css@^11.9.0":
   version "11.9.0"
   resolved "https://registry.yarnpkg.com/@emotion/css/-/css-11.9.0.tgz#d5aeaca5ed19fc61cbdc9e032ad0b32fa6e366be"
@@ -363,6 +371,17 @@
   integrity sha512-3QnhqeL+WW88YjYbQL5gUIkthuMw7a0NGbZ7wfFVk2kg/CK5w8w5FFa0RzWjyY1+sujN0NWbtSHH6OJmWHtJpQ==
   dependencies:
     "@emotion/memoize" "^0.7.4"
+
+"@emotion/jest@^11.9.1":
+  version "11.9.1"
+  resolved "https://registry.yarnpkg.com/@emotion/jest/-/jest-11.9.1.tgz#65224814552eab6acb923504e597c6f6b67e90d6"
+  integrity sha512-JFf9yBA6a7fKrKCWMmjODGRcgBnjiQsl9AakP1y7oRJ6B147ZKPo8DgzHUZ5qQkI06GKAWwYU1vKROInc7SYVA==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    "@emotion/css-prettifier" "^1.0.1"
+    chalk "^4.1.0"
+    specificity "^0.4.1"
+    stylis "4.0.13"
 
 "@emotion/memoize@^0.7.4", "@emotion/memoize@^0.7.5":
   version "0.7.5"
@@ -3011,11 +3030,6 @@ jest-docblock@^28.0.0:
   dependencies:
     detect-newline "^3.0.0"
 
-jest-dom@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/jest-dom/-/jest-dom-4.0.0.tgz#94eba3cbc6576e7bd6821867c92d176de28920eb"
-  integrity sha512-gBxYZlZB1Jgvf2gP2pRfjjUWF8woGBHj/g5rAQgFPB/0K2atGuhVcPO+BItyjWeKg9zM+dokgcMOH01vrWVMFA==
-
 jest-each@^28.0.0:
   version "28.0.0"
   resolved "https://registry.yarnpkg.com/jest-each/-/jest-each-28.0.0.tgz#3e9aeca064c140126c45e6b1809743f89bdc86b6"
@@ -4413,6 +4427,11 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
+
+specificity@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/specificity/-/specificity-0.4.1.tgz#aab5e645012db08ba182e151165738d00887b019"
+  integrity sha512-1klA3Gi5PD1Wv9Q0wUoOQN1IWAuPu0D1U03ThXTr0cJ20+/iq2tHSDnK7Kk/0LXJ1ztUB2/1Os0wKmfyNgUQfg==
 
 sprintf-js@~1.0.2:
   version "1.0.3"
