@@ -21,6 +21,9 @@
 
 ## dependencies
 
+- jest
+- @testing/library/jest-dom
+- @testing/library/react
 - @emotion/css
 - @emotion/react
 - @emotion/server
