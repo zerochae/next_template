@@ -1,0 +1,6 @@
+{
+  "extends": ["next/core-web-vitals", "react-app", "airbnb", "prettier"],
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  }
+}
