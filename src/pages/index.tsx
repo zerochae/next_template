@@ -4,9 +4,13 @@ import Button from "components/Button";
 import { useRecoilState } from "recoil";
 import { pageNameState } from "states";
 import Link from "next/link";
+import { useObserver } from "mobx-react";
+import { PageProps, useStore } from "stores";
 
 const Home: NextPage = () => {
   const [pageName, setPageName] = useRecoilState(pageNameState);
+
+  const { name, changeName }: PageProps = useStore().page;
 
   return (
     <div>
