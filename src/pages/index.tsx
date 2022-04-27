@@ -4,12 +4,15 @@ import Button from "components/Button";
 import { useRecoilState } from "recoil";
 import { pageNameState } from "states";
 import Link from "next/link";
-import { useObserver } from "mobx-react";
 import { PageProps, useStore } from "stores";
+import { atom, useAtom } from "jotai";
+
+const name_atom = atom("");
 
 const Home: NextPage = () => {
   const [pageName, setPageName] = useRecoilState(pageNameState);
   const { name, changeName }: PageProps = useStore().page;
+  const [nameAtom, setNameAtom] = useAtom(name_atom);
 
   return (
     <div>
@@ -19,8 +22,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <span>pageName: {pageName} {name}</span>
-        <Button pageName={"index"} setPageName={setPageName} changeName={changeName}/>
+        <span>
+          pageName: {pageName} {name} {nameAtom}
+        </span>
+        <Button
+          pageName={"index"}
+          setPageName={setPageName}
+          changeName={changeName}
+          setNameAtom={setNameAtom}
+        />
         <Link href="/post">
           <button>Post Pages 이동</button>
         </Link>

@@ -5,25 +5,16 @@ import { Suspense } from "react";
 import { useQuery } from "react-query";
 import { useRecoilState } from "recoil";
 import { pageNameState } from "../states";
-import Error from "next/error";
 import { useStore } from "stores";
+import { atom, useAtomValue, useSetAtom } from "jotai";
+
+const name_atom = atom("");
 
 const PostPage: NextPage = () => {
   const [pageName, setPageName] = useRecoilState(pageNameState);
-
   const { name, changeName } = useStore().page;
-
-  // const { data } = useQuery(
-  //   ["pageName", pageName],
-  //   async () => {
-  //     const fetchData = await fetch("http://localhost:3000/api/hello2");
-  //     return await fetchData.json();
-  //   },
-  //   {
-  //     suspense: true,
-  //     useErrorBoundary: true,
-  //   }
-  // );
+  const nameAtom = useAtomValue(name_atom);
+  const setNameAtom = useSetAtom(name_atom);
 
   return (
     <Suspense fallback={<div>loading</div>}>
@@ -31,12 +22,13 @@ const PostPage: NextPage = () => {
       <div>
         <div>
           <span>
-            pageName: {pageName} {name}
+            pageName: {pageName} {name} {nameAtom}
           </span>
           <Button
             pageName={"post"}
             setPageName={setPageName}
             changeName={changeName}
+            setNameAtom={setNameAtom}
           />
         </div>
         {/* <div>{JSON.stringify(data)}</div> */}
