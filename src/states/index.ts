@@ -9,6 +9,8 @@ export const getNameSelector = selector({
   key: "getNameSelector",
   get: async () => {
     const res = await fetch("http://localhost:3000/api/hello");
-    return res;
+    const json = await res.json();
+
+    return json.data;
   },
 });
