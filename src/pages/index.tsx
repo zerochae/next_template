@@ -1,8 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Button from "components/Button";
+import { useRecoilState } from "recoil";
+import { pageNameState } from "states";
+import Link from "next/link";
 
 const Home: NextPage = () => {
+  const [pageName, setPageName] = useRecoilState(pageNameState);
+
   return (
     <div>
       <Head>
@@ -11,8 +16,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        main
-        <Button />
+        <span>pageName: {pageName}</span>
+        <Button pageName={"index"} setPageName={setPageName} />
+        <Link href="/post">
+          <button>Post Pages 이동</button>
+        </Link>
       </main>
       <footer></footer>
     </div>
