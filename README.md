@@ -22,6 +22,7 @@
 ## dependencies
 
 - jest
+- cypress
 - @testing/library/jest-dom
 - @testing/library/react
 - @emotion/css
@@ -29,3 +30,11 @@
 - @emotion/server
 - @emotion/styled
 - @emotion
+- babel-jest
+- ts-jest
+- ts-loader
+- postcss
+- tailwindcss
+- twin.macro
+
+  
