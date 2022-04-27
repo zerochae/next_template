@@ -9,7 +9,6 @@ import { PageProps, useStore } from "stores";
 
 const Home: NextPage = () => {
   const [pageName, setPageName] = useRecoilState(pageNameState);
-
   const { name, changeName }: PageProps = useStore().page;
 
   return (
@@ -20,8 +19,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <span>pageName: {pageName}</span>
-        <Button pageName={"index"} setPageName={setPageName} />
+        <span>pageName: {pageName} {name}</span>
+        <Button pageName={"index"} setPageName={setPageName} changeName={changeName}/>
         <Link href="/post">
           <button>Post Pages 이동</button>
         </Link>

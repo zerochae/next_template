@@ -5,6 +5,7 @@ import React from "react";
 interface ButtonProps {
   pageName: string;
   setPageName: (diff: string) => void;
+  changeName: (diff: string) => void;
 }
 
 const MyButton = styled.button`
@@ -17,11 +18,16 @@ underline
   display: block;
 `;
 
-const Button = ({ pageName, setPageName }: ButtonProps): JSX.Element => {
+const Button = ({
+  pageName,
+  setPageName,
+  changeName,
+}: ButtonProps): JSX.Element => {
   return (
     <MyButton
       onClick={() => {
         setPageName(pageName);
+        changeName(pageName);
       }}
     >
       button

@@ -8,7 +8,7 @@ export interface PageProps {
 export const page = observable<PageProps>({
   name: "",
   changeName(content: string) {
-    this.name = content;
+    page.name = content;
   },
 });
 
