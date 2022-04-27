@@ -1,15 +1,11 @@
 import styled from "@emotion/styled/macro";
-import { css } from "@emotion/react";
 import tw from "twin.macro";
+import React from "react";
 
-// const MyButton = styled.button([
-//   tw`
-// bg-[red]`,
-//   css`
-//     font-size: 40px;
-//     font-weight: bold;
-//   `,
-// ]);
+interface ButtonProps {
+  pageName: string;
+  setPageName: (diff: string) => void;
+}
 
 const MyButton = styled.button`
   ${tw`
@@ -18,10 +14,19 @@ font-bold
 underline
 `}
   color: red;
+  display: block;
 `;
 
-const Button = () => {
-  return <MyButton>button</MyButton>;
+const Button = ({ pageName, setPageName }: ButtonProps): JSX.Element => {
+  return (
+    <MyButton
+      onClick={() => {
+        setPageName(pageName);
+      }}
+    >
+      button
+    </MyButton>
+  );
 };
 
 export default Button;
